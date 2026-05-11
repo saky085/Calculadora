@@ -59,3 +59,33 @@ while true; do
     echo "  ||"
     echo "  ||  resultado de la operacion  $digito  $signo  $numero  =  $resultado"
     echo "  ||"
+
+
+    echo ""
+    echo "  ||  Deseas continuar?"
+    echo "  ||"
+    echo "  ||    [1]  Realizar otro calculo"
+    echo "  ||    [2]  Salir"
+    echo "  ||"
+    echo -n "  ||  >> "
+    read continuar
+
+    while [[ "$continuar" != "1" && "$continuar" != "2" ]]; do
+        echo "  ||  [!] Opcion no valida. Ingresa 1 o 2:"
+        echo -n "  ||  >> "
+        read continuar
+    done
+
+    if [ "$continuar" == "2" ]; then
+        echo " "
+        echo "  ||"
+        echo "  ||  Gracias por usar la calculadora."
+        echo "  ||  Hasta luego!"
+        echo "  ||"
+        echo ""
+        break
+    fi
+
+    echo ""
+
+done
